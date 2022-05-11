@@ -1,0 +1,37 @@
+.feedEkList {
+    list-style-type: none;
+    color: #3E3E3E;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.itemTitle a {
+    color: #003d6a;
+    text-decoration: none
+}
+
+.itemTitle a:visited {
+    color: #003e6a8e;
+    text-decoration: none;
+}
+
+.itemTitle {
+    padding: 0.5em 0;
+    border-bottom: thin solid grey;
+}
+
+.itemTitle a {
+    color: #003d6a;
+    text-decoration: none;
+}
+
+.itemDate {
+    font-size: smaller;
+    color: #AAAAAA;
+}
+
+#rssload img {
+    margin: 5% 45%;
+    width: 10%;
+}

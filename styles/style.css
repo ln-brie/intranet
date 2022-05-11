@@ -1,0 +1,1744 @@
+/*--------------------------------------------------------------------------------------
+Feuille de style de l'intranet ARTS Energy
+Mobile first -> styles tablettes et desktop en fin de document
+
+
+-----------------------------------------------------------------------------------------
+Styles de la page  !!!!!! NE PAS TOUCHER !!!!!! 
+----------------------------------------------------------------------------------------*/
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    min-height: 100%;
+    background-color: white;
+}
+
+main {
+    padding: 0 1em 8em;
+    max-width: 100%;
+    margin: 0;
+}
+
+header {
+    margin: 0 0 1em;
+    padding: 0;
+    max-width: 100%;
+    /*background-image: url('../img/cafe.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;*/
+    border-bottom: thick solid #003d6a;
+}
+
+/*--------------------------------------------------------------------------------------
+Styles de la barre supérieure (horloges et météo)
+----------------------------------------------------------------------------------------*/
+
+#barreHaut {
+    background-color: white;
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#clocks {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    font-size: 8pt;
+    font-weight: bold;
+    color: #003d6a;
+}
+
+#clocks div {
+    min-width: 5em;
+    margin: auto 0.5em;
+}
+
+#clocks p {
+    margin: 0.2em;
+}
+
+#clocks div p:first-of-type {
+    margin-bottom: 0;
+}
+
+#clocks div p:last-of-type {
+    margin-top: 0;
+}
+#clockNersac {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#clockNersac p {
+    margin: 0;
+}
+
+#dateJour {
+    padding-right: 2em ;
+}
+
+#meteoNersac {
+    display: flex;
+    flex-direction: row;
+    font-size: 8pt;
+    align-items: center;
+    color: #003d6a;
+    font-weight: bold;
+}
+
+#meteoNersac p:first-child {
+    margin-right: 0.8em;
+}
+
+#meteoNersac div {
+    margin-right: 0.8em;
+}
+
+#meteoNersac img {
+    height: 3em;
+}
+
+#meteoNersac div p {
+    margin: 0;
+}
+
+/*--------------------------------------------------------------------------------------
+Styles de l'entête : partie blanche avec logo
+----------------------------------------------------------------------------------------*/
+
+#entete a img {
+    max-width: 100%;
+    height: 15vh;
+    margin: 0.5em auto auto;
+}
+
+#entete a {
+    display: block;
+    text-align: center;
+    margin: auto;
+}
+
+#entete {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    color: #e86616;
+    font-size: 20pt;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+#wrapper {
+    max-width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #003d6a;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding: inherit inherit 8em;
+    position: relative;
+}
+
+/*--------------------------------------------------------------------------------------
+Styles des éléments communs : boutons et messages d'alerte
+----------------------------------------------------------------------------------------*/
+
+.intraButton {
+    background-color: white;
+    padding: 0.5em;
+    color: #003d6a;
+    font-weight: bold;
+    border-radius: 2em;
+    box-shadow: none;
+    border: 0.25em solid #e86616;
+    cursor: pointer;
+}
+
+a.lienBouton {
+    cursor: default;
+}
+
+/*--------------------------------------------------------------------------------------
+Styles du menu
+----------------------------------------------------------------------------------------*/
+
+#menusp {
+    position: fixed;
+    z-index: 999;
+    background-color: #003d6a;
+    color: white;
+    border-radius: 50%;
+    padding: 0.2em 0.2em 0;
+    margin: 1.5em 0 0;
+    top: 1em;
+    left: 1em;
+}
+
+#menusp i {
+    padding: 0.5em;
+    width: 1.2em;
+    height: 1.2em;
+    text-align: center;
+    margin: 0;
+}
+
+#menuHaut {
+    display: none;
+    position: fixed;
+    z-index: 998;
+    width: 70%;
+    height: 100%;
+    top: 0;
+    background-color: #003d6a;
+    color: white;
+    padding: 5em 0.7em 0 2em;
+}
+
+#menuHaut li {
+    list-style-type: none;
+    padding-bottom: 0.5em;
+}
+
+#connectLink {
+    display: none;
+}
+
+.logoService {
+    display: none;
+}
+
+#listeServices {
+    padding-top: 0.5em;
+}
+
+#search {
+    display: flex;
+    flex-direction: row;
+}
+
+#search i {
+    margin-right: 0.5em;
+}
+
+#search input {
+    border-radius: 0.7em;
+    box-shadow: none;
+    border: none;
+    padding: 0.2em;
+}
+
+/*--------------------------------------------------------------------------------------
+Styles de la page d'accueil
+----------------------------------------------------------------------------------------*/
+#haut li {
+    list-style-type: none;
+}
+
+#haut li a {
+    text-decoration: none;
+    color: #003d6a;
+    font-weight: bold;
+}
+
+#nvtes ul li {
+    margin-bottom: 0.3em;
+}
+
+#annuaires li {
+    text-align: center;
+}
+
+span.capitale::first-letter {
+    text-transform: capitalize;
+}
+
+.postIt ul {
+    padding: 0;
+}
+
+.postIt li {
+    margin-left: 0.5em;
+}
+
+.postIt {
+    border-radius: 0.2em;
+}
+
+.postIt h2 {
+    font-size: 16pt;
+    position: relative;
+    border: 0.2em solid #e86616;
+    border-radius: 2em;
+    text-align: center;
+    padding: 0.2em;
+    box-shadow: 0px 9px 6px -2px rgba(0, 0, 0, 0.3);
+}
+
+.postIt h2::first-letter {
+    text-transform: uppercase;
+}
+
+.postIt h3::first-letter {
+    text-transform: uppercase;
+}
+
+.postIt h2 i {
+    display: none;
+}
+
+.imp {
+    margin: 1em 1em 2em;
+    position: relative;
+}
+
+.note {
+    background: #d6dfe6af;
+    color: #003d6a;
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0 10px 10px 2px rgba(0, 0, 0, 0.3);
+}
+.note a {
+    color: #e86616;
+    text-decoration: none;
+}
+.note img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.imp:nth-of-type(even) .note{
+    transform: rotate(2deg);
+}
+.imp:nth-of-type(odd) .note{
+    transform: rotate(358deg);
+}
+
+.note h2 {
+    text-align: center;
+}
+.note p {
+    font-size: 14pt;
+}
+
+.note .service {
+    display: block;
+    margin: 2em 0 0;
+    text-align: right;
+}
+
+.pin {
+    background-color: #aaa;
+    display: block;
+    height: 32px;
+    width: 2px;
+    position: absolute;
+    left: 50%;
+    top: -16px;
+    z-index: 1;
+  }
+  .pin:after {
+    background-color: #e86616;
+    background-image: radial-gradient(circle  hsla(0,0%,100%,.3), hsla(0,0%,0%,.3));
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 1px hsla(0,0%,0%,.1),
+                inset 3px 3px 3px hsla(0,0%,100%,.2),
+                inset -3px -3px 3px hsla(0,0%,0%,.2),
+                23px 20px 3px hsla(0,0%,0%,.15);
+    content: '';
+    height: 12px;
+    left: -5px;
+    position: absolute;
+    top: -10px;
+    width: 12px;
+  }
+  .pin:before {
+    background-color: hsla(0,0%,0%,0.1);
+    box-shadow: 0 0 .25em hsla(0,0%,0%,.1);
+    content: '';
+    height: 24px;
+    width: 2px;
+    left: 0;
+    position: absolute;
+    top: 8px;
+    transform: rotate(57.5deg);
+    transform-origin: 50% 100%;
+  }
+  #UNlogo {
+      height: 1em;
+  }
+  #actusRss a img {
+      height: 4em;
+      margin: auto;
+  }
+  #actusRss a {
+      text-align: center;
+      display: block;
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+      margin: auto;
+  }
+  #rssAccueil a {
+      text-align: left;
+  }
+
+
+/*--------------------------------------------------------------------------------------
+Styles du formulaire d'ajout et de modication des guides et annuaires
+----------------------------------------------------------------------------------------*/
+#shortForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    text-align: center;
+    margin: 1em auto;
+}
+
+#shortForm input, #sortForm select {
+    width: 100%;
+    margin: 0.5em auto;
+    display: block;
+}
+
+#shortForm button {
+    margin: 1em auto auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+/*--------------------------------------------------------------------------------------
+Styles de la page des outils et applications
+----------------------------------------------------------------------------------------*/
+#appli {
+    display: flex;
+    flex-direction: column;
+}
+
+#appli div {
+    box-shadow: 0px 9px 6px -2px #7e838f71;
+    margin-bottom: 1em;
+}
+
+.lienApp img {
+    max-height: 5em;
+    margin: auto;
+}
+.lienApp {
+    display: block;
+    text-align: center;
+    margin: auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+.itemGuide {
+    margin-left: 2em;
+}
+
+#addGuideBtn {
+    width: 100%;
+}
+
+/*--------------------------------------------------------------------------------------
+Styles communs aux pages des services
+----------------------------------------------------------------------------------------*/
+
+#wrapperPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#wrapperPage h3 {
+    margin: 0;
+    text-align: left;
+}
+
+.imgService {
+    max-width: 100%;
+}
+
+span.articles {
+    display: none;
+}
+
+.postIt article {
+    box-shadow: 0px 9px 6px -2px #7e838f71;
+    background-color: #003e6a07;
+    margin-bottom: 1em;
+    padding: 0.5em;
+}
+
+.postIt article ul {
+    padding-left: 1em;
+}
+
+.postIt article p {
+    margin-bottom: 0;
+}
+
+.postIt a {
+    color: #e86616;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.postIt article table {
+    border-collapse: collapse;
+    margin: auto;
+}
+
+.postIt article table td {
+    border: thin solid #003d6a;
+    padding: 0.3em;
+}
+
+#wrapperPage #droite {
+    display: flex;
+    flex-direction: column;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    text-align: center;
+    background-color: #d6dfe6af;
+    padding: 1em;
+}
+
+#droite h3 {
+    text-align: center;
+    margin-bottom: 1em;
+}
+#droite h3::first-letter {
+    text-transform: capitalize;
+}
+
+.memo {
+    font-family: 'Neucha', cursive;
+    margin-top: 1em;
+    padding-top: 1em;
+    border-top: thin solid #003d6a;
+}
+
+.memo a {
+    text-decoration: none;
+    color: #e86616;
+    font-weight: bold;
+}
+
+#memoService {
+    display: block;
+    float: right;
+    color: #e86616;
+}
+#memoService i {
+    cursor: pointer;
+
+}
+
+#formMemo {
+    display: none;
+}
+
+#formMemo button {
+    margin: auto;
+}
+
+/*--------------------------------------------------------------------------------------
+Styles des résultats de recherche
+----------------------------------------------------------------------------------------*/
+.clignote {
+    -webkit-animation: clignotement 200ms linear 2 forwards;
+            animation: clignotement 200ms linear 2 forwards;
+}
+
+@-webkit-keyframes clignotement {
+    0% {
+        background-color: inherit;
+    }
+
+    100% {
+        background-color: #e867163b;
+    }
+}
+
+@keyframes clignotement {
+    0% {
+        background-color: inherit;
+    }
+
+    100% {
+        background-color: #e867163b;
+    }
+}
+
+#resultatsRech h2 {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+#resultatsRech p {
+    margin-left: 3em;
+}
+
+#resultatsRech a {
+    color: #e86616;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/*--------------------------------------------------------------------------------------
+Styles des formulaires ajout et modification
+----------------------------------------------------------------------------------------*/
+.center {
+    text-align: center;
+    margin: inherit auto;
+}
+
+#formulairePost {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    background-color: white;
+    padding: 0.5em;
+    margin-top: 0.5em;
+}
+
+#formulairePost h2 {
+    text-align: center;
+}
+
+.trumbowyg a {
+    text-decoration: none;
+    color: #e86616;
+}
+
+#formulairePost input {
+    margin: 1em 0;
+}
+
+#formulairePost textarea {
+    margin: 1em 0;
+}
+
+#formulairePost select {
+    padding: 0.5em;
+    margin: 0.5em 0;
+}
+
+#formulairePost label {
+    margin-top: 1em;
+}
+
+#retourFile p {
+    text-align: left;
+    margin-bottom: 0.3em;
+    margin-top: 0;
+}
+
+#exclure input {
+    margin-right: 0.5em;
+}
+
+#selectFile {
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+#selectFile input {
+    margin: 0.2 auto auto;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.buttons a {
+    color: black;
+    text-decoration: none;
+    cursor: default;
+    margin: 0.8em 0.5em 0;
+}
+
+#addFile {
+    text-align: center;
+    margin: auto;
+}
+
+#addFile input {
+    margin-bottom: 1em;
+}
+
+#formulairePost a {
+    text-align: center;
+}
+
+#formulairePost a button {
+    margin: 1em auto auto;
+}
+
+#aidePost {
+    display: none;
+}
+
+/*--------------------------------------------------------------------------------------
+Styles de la barre d'édition (barre orange sous le menu pour les usagers autorisés)
+----------------------------------------------------------------------------------------*/
+#edition {
+    background-color: #e86616;
+    font-size: small;
+    border-radius: 0.5em;
+    margin-bottom: 1em;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding-right: 2em;
+}
+
+#edition ul {
+    display: flex;
+    margin: 0;
+    padding: 0.5em 0;
+}
+
+#edition ul li {
+    list-style-type: none;
+    margin-left: 2em;
+}
+
+#edition ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+/*--------------------------------------------------------------------------------------
+Styles de la page de suppression d'un post
+----------------------------------------------------------------------------------------*/
+
+#post {
+    text-align: center;
+}
+
+#delpostform {
+    margin: 2em auto;
+    text-align: center;
+}
+
+.pAlertSupp {
+    display: block;
+    color: white;
+    background-color: #003d6a;
+    font-size: small;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 1em auto;
+    padding: 0.5em 1em;
+    font-weight: bold;
+    border-radius: 2em;
+}
+
+/*--------------------------------------------------------------------------------------
+Styles de la page des sections
+----------------------------------------------------------------------------------------*/
+#listeSections h2 {
+    margin-bottom: 2em;
+}
+
+#listeSections td {
+    padding: 0.5em;
+}
+
+#listeSections table {
+    border: thin solid #003d6a;
+    margin: 1em auto;
+    width: 15em;
+}
+
+.editName {
+    color: #e86616;
+    cursor: pointer;
+}
+
+#listeSections td:first-of-type {
+    width: 24em;
+}
+
+#listeSections label {
+    display: block;
+    margin-bottom: 0.5em;
+    width: 100%;
+}
+
+#listeSections input {
+    margin-right: 0.2em;
+
+}
+
+#listeSections button {
+    background-color: #003e6a2d;
+    border: thin solid #003e6a48;
+    border-radius: 0.2em;
+}
+
+#listeSections button i {
+    color: #e86616;
+}
+
+#newSection {
+    text-align: center;
+    margin: 2em auto;
+    position: relative;
+}
+
+#response {
+    text-align: center;
+    font-size: small;
+    width: 100%;
+    color: red;
+}
+
+/*--------------------------------------------------------------------------------------
+Styles de la page de confirmation de suppression d'une section
+----------------------------------------------------------------------------------------*/
+#suppSec {
+    margin: 2em auto 0;
+}
+
+#suppSec h3 {
+    text-align: center;
+}
+
+.depPosts {
+    margin: 2em auto 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.depPosts select {
+    margin: 1em 0;
+}
+
+.depPosts button {
+    margin-top: 1em;
+}
+
+/*--------------------------------------------------------------------------------------
+Styles de la page d'édition d'une section
+----------------------------------------------------------------------------------------*/
+
+#majSection {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+#majSection button {
+    margin: 1em 0.3em 0;
+}
+
+ul#listeSec {
+    margin: auto auto 2em;
+}
+
+#listeSec li {
+    text-align: left;
+}
+
+#listeSec li:first-of-type {
+    margin-top: 0.5em;
+}
+
+/*--------------------------------------------------------------------------------------
+Styles de la page de gestion de la bdd
+----------------------------------------------------------------------------------------*/
+#bddMgmt a {
+    display: block;
+    margin: 0.5em auto;
+    text-align: center;
+}
+
+#mgmtPostsForm {
+    margin: 2em auto;
+}
+
+#mgmtPostsForm button {
+    display: inline-block;
+    margin: auto;
+}
+
+.tabMgmt {
+    margin: auto;
+}
+
+.tabMgmt td {
+    padding: 0.3em 0.7em;
+    text-align: center;
+}
+
+.tabMgmt tr:nth-of-type(even) {
+    background-color: #003e6a2a;
+}
+
+#mgmtpostsbtn {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+}
+
+#mgmtpostsbtn span {
+    margin: 1em auto auto;
+}
+
+#mgmtpostsbtn span button {
+    margin-right: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+#mgmtEmpForm button {
+    display: block;
+    margin: 1.5em auto;
+}
+
+#mgmtUpdateSection button {
+    margin: auto 0.5em 1em;
+}
+
+#mgmtUpdateSection label {
+    text-align: center;
+    display: block;
+    margin: auto auto 0.5em;
+    width: 100%;
+}
+
+#mgmtListeSec li:first-of-type {
+    margin-top: 00.5em;
+}
+
+#mgmtSectionForm {
+    width: 60%;
+    margin: auto;
+}
+
+#retourSection {
+    color: red;
+    font-size: small;
+}
+
+#mgmtAddSection {
+    margin: 0.5em auto 2em;
+    text-align: center;
+    width: 50%;
+}
+
+#mgmtAddSection input {
+    margin: auto 0.5em;
+}
+
+#mgmtAddSection p {
+    text-align: center;
+}
+
+/*--------------------------------------------------------------------------------------
+Styles de la page choix des posts à diffuser et à mettre en page d'accueil
+----------------------------------------------------------------------------------------*/
+
+#diffusionform {
+    margin-top: 2em;
+}
+
+#diffusionform button {
+    display: block;
+    margin: 1em auto;
+}
+
+#alertValid {
+    background-color: #003e6a77;
+    color: white;
+    border-radius: 50%;
+    display: none;
+    width: 9em;
+    height: 5em;
+    margin: auto;
+    padding: 3em 1em;
+    position: fixed;
+    font-size: small;
+    text-align: center;
+    left: 3em;
+    bottom: 6em;
+}
+/*--------------------------------------------------------------------------------------
+Styles du carousel
+----------------------------------------------------------------------------------------*/
+.owl-carousel {
+    text-align: center;
+    max-height: 30em;
+    max-width: 70%;
+    margin: auto;
+}
+
+.owl-carousel h2 {
+    font-size: 2em;
+}
+
+.owl-carousel p {
+    font-size: 1.5em;
+}
+
+.owl-carousel a {
+    text-decoration: none;
+    color: #003d6a;
+}
+
+/*--------------------------------------------------------------------------------------
+Styles de la présentation vidéo
+----------------------------------------------------------------------------------------*/
+#diffVideo {
+    height: 85vh;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: auto;
+}
+
+#diffVideo video {
+    max-height: 100% ;
+    max-width: 100%;
+}
+
+#boutonsVid {
+    display: flex;
+    flex-direction: row;
+    margin: auto 25%;
+    justify-content: space-around;
+}
+#boutonsVid button {
+    display: block;
+    width: 11em;
+}
+#boutonsVid a {
+    color: #003d6a;
+}
+
+/*--------------------------------------------------------------------------------------
+Styles du guide d'utilisation
+----------------------------------------------------------------------------------------*/
+#guideUtilisation {
+    padding-bottom: 2em;
+    text-align: justify;
+}
+
+#guideUtilisation h2 {
+    text-align: center;
+}
+
+#guideUtilisation ul li {
+    list-style: none;
+    color: #e86616;
+}
+
+#guideUtilisation ul li a {
+    text-decoration: none;
+    color: #e86616;
+}
+
+#guideUtilisation h3 {
+    color: #003d6a;
+    text-align: center;
+}
+
+#guideUtilisation h4 {
+    color: #e86616;
+}
+
+#contenuLexique {
+    width: 100%;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+}
+
+#contenuLexique img {
+    max-width: 50%;
+    max-height: 50%;
+    margin: auto;
+}
+
+#guideSections, #guidePosts, #guideFaq, #guideLogin {
+    border-top: thin solid #003d6a;
+}
+
+#guideLogin {
+    margin-top: 2em;
+}
+
+/*--------------------------------------------------------------------------------------
+Styles de la galerie
+----------------------------------------------------------------------------------------*/
+#pageGalerie {
+    padding: 1em;
+}
+
+#msgGalerie {
+    text-align: center;
+    width: 100%;
+}
+
+#retourImg {
+    text-align: center;
+}
+
+#formAddPhoto {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    margin: auto;
+}
+
+#formAddPhoto span input {
+    width: 50%;
+}
+
+#formAddPhoto h3 {
+    text-align: center;
+}
+
+#formAddPhoto input {
+    margin-top: 1em;
+}
+
+#formAddPhoto button {
+    margin-top: 1em;
+}
+
+.miniature {
+    height: 2em;
+}
+#formSuppImg {
+    text-align: center;
+    padding-bottom: 2em;
+}
+#formSuppImg button {
+    margin-top: 1em;
+}
+
+#formSuppImg table {
+    margin: auto;
+}
+
+#formSuppImg table tr td {
+    padding: 0.5em 1em;
+    text-align: center;
+    border-bottom: thin solid #003d6a;
+}
+
+#lienAddImg {
+    cursor: pointer;
+    text-align: center;
+    color: #e86616;
+    font-weight: bold;
+}
+
+#galleryMgmt {
+    text-align: center;
+    margin-top: 2em;
+}
+
+#uploadPhoto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+}
+
+#uploadPhoto button {
+    margin-top: 1em;
+}
+
+#uploadPhoto input {
+    margin: auto;
+}
+
+/*--------------------------------------------------------------------------------------
+Styles du pied de page footer
+----------------------------------------------------------------------------------------*/
+
+footer {
+    background-color: #003d6a;
+    margin-top: 1em;
+    padding: 0.5em;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 10pt;
+}
+
+footer span {
+    margin-top: 0.5em;
+}
+
+footer span img {
+    height: 1em;
+    margin: auto 0.2em;
+    vertical-align: baseline;
+}
+
+footer div a {
+    color: white;
+    text-decoration: none;
+    margin: 0.2em 0 0;
+    padding: 0;
+}
+
+footer div p {
+    margin: 0 0 0.3em;
+    padding: 0;
+}
+
+#adresse {
+    text-align: right;
+    border-right: thin solid white;
+    padding-right: 0.5em;
+    margin-top: 0.8em;
+}
+
+#liensFooter {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0.5em;
+    margin-top: 0.6em;
+}
+
+
+
+
+/*------------------------------------------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Styles des tablettes
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------------------------------------------------------------*/
+
+@media screen and (min-width:768px) {
+    /*--------------------------------------------------------------------------------------
+    Styles tablette de l'entête
+    ----------------------------------------------------------------------------------------*/
+    #barreHaut {
+        display: flex;
+    }
+
+    #entete {
+        flex-direction: row;
+        align-items: flex-end;
+    }
+
+    #entete h1 {
+        font-size: 1.5em;
+    }
+
+    #menuHaut {
+        width: 50%;
+    }
+
+    #connectLink {
+        display: block;
+        margin: auto;
+        text-align: center;
+    }
+
+    #connect form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #connect input {
+        display: block;
+        margin: 0 auto 0.8em;
+        padding: 0.2em;
+        width: 26em;
+    }
+    #retourConnect {
+        text-align: center;
+    }
+
+    /*--------------------------------------------------------------------------------------
+    Styles tablette de la page accueil
+    ----------------------------------------------------------------------------------------*/
+
+    #homeDroite {
+        width: 100%;
+    }
+
+    #important {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    #important div {
+        width: 40%;
+    }
+    
+
+    /*--------------------------------------------------------------------------------------
+    Styles tablette des pages des services
+    ----------------------------------------------------------------------------------------*/
+
+    #formulairePost {
+        width: 60%;
+    }
+
+    #wrapperPage {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #wrapperPage #droite {
+        width: 25%;
+    }
+
+    #wrapperPage #gauche {
+        width: 65%;
+    }
+    #listeSections table {
+        width: 30em;
+    }
+    
+    #wrapperPage #droite {
+        margin-top: 1.5em;
+    }
+
+    .intraButton {
+        width: 10em;
+        margin: auto;
+    }
+    /*--------------------------------------------------------------------------------------
+    Styles tablette de la bulle d'aide pour la création de post
+    ----------------------------------------------------------------------------------------*/
+    #titreAddForm {
+        display: flex;
+        justify-content: center;
+    }
+    
+    #aidePost {
+        display: block;
+        z-index: 999;
+    }
+
+    #aidePost h3 {
+        padding: 0.2em 0.3em;
+        font-size: 14pt;
+        text-align: right;
+        margin: 1em 0.5em 0;
+        color: #e86616;
+        vertical-align: bottom;
+    }
+    
+    #aidePost span {
+        position: absolute;
+        color: #003d6a;
+        background-color: #fcf3ee;
+        width: 70%;
+        right: -10%;
+        padding: 1em;
+        display: none;
+        border-radius: 1em;
+    }
+
+    #aidePost ol {
+        padding-left: 0.5em;
+    }
+
+    #aidePost ol li {
+        margin-left: 1em;
+    }
+
+    #aidePost ol li ul {
+        padding-left: 0;
+        margin-bottom: 0.5em;
+    }
+
+
+    /*--------------------------------------------------------------------------------------
+    Styles tablette des pages des applications
+    ----------------------------------------------------------------------------------------*/
+    #appli {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    #appli div {
+        width: 40%;
+    }
+    #addGuideBtn {
+        display: block;
+        width: auto;
+        margin: auto;
+    }
+
+    #ajoutGuide {
+        width: 60%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    /*--------------------------------------------------------------------------------------
+    Styles tablette des pages de gestion de la bdd
+    ----------------------------------------------------------------------------------------*/
+    #mgmtUpdateSection label {
+        display: inline;
+    }
+
+    #mgmtUpdateSection {
+        margin-top: 2em;
+        text-align: center;
+    }
+
+    /*--------------------------------------------------------------------------------------
+    Styles tablette du guide utilisateur de l'intranet
+    ----------------------------------------------------------------------------------------*/
+    
+    #contenuLexique {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    #contenuLexique span {
+        width: 60%;
+    }
+
+    #contenuLexique img {
+        width: 35%;
+        max-width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+
+    /*--------------------------------------------------------------------------------------
+    Styles tablette du footer
+    ----------------------------------------------------------------------------------------*/
+
+    #adresse {
+        padding-right: 1em;
+    }
+
+    #liensFooter {
+        padding-left: 1em;
+    }
+
+    /*--------------------------------------------------------------------------------------
+    Styles tablette des brouillons
+    ----------------------------------------------------------------------------------------*/
+
+    #listeBr {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .brouillon {
+        width: 42%;
+        border-radius: 0.5em;
+        box-shadow: 6px 7px 5px 2px #7e838f71;
+        padding: 0.5em 1em;
+        margin-bottom: 0.5em;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .postBr {
+        width: 90%;
+    }
+
+    .editBr {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .editBr a {
+        padding: 0.5em;
+    }
+
+    .editBr a:hover {
+        background-color: #e86616;
+        border-radius: 0.5em;
+        color: white;
+    }
+
+}
+
+
+
+/*------------------------------------------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Styles desktop
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------------------------------------------------------------*/
+
+@media screen and (min-width:1024px) {
+
+    /*--------------------------------------------------------------------------------------
+    Menu desktop -- à supprimer pour n'avoir plus qu'un menu burger pour toutes les résolutions
+    ----------------------------------------------------------------------------------------*/
+
+    #menusp {
+        display: none;
+    }
+
+    #menuHaut {
+        display: block;
+        position: static;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    #connectLink {
+        display: block;
+        float: left;
+        margin-top: 10px;
+        margin-left: 1em;
+    }
+
+    #entete h1 {
+        font-size: 4vh;
+        margin-bottom: 1vh;
+    }
+
+    #liensMenu {
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        justify-content: flex-end;
+        padding: 0.7em 0;
+        margin: 0;
+    }
+
+
+    #liensMenu li {
+        margin-right: 1em;
+        padding: 0;
+    }
+
+    .logoService {
+        display: block;
+        max-width: 100%;
+        margin: auto;
+        height: 4em;
+        align-self: flex-start;
+    }
+
+    .service {
+        align-items: stretch;
+    }
+
+    #listeServices {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-content: space-between;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0.5em 0;
+        width: 100%;
+        max-width: 100%;
+        background-color: white;
+        max-height: 100%;
+        height: 100%;
+        border-bottom: thin solid #e86616;
+        font-size: smaller;
+        z-index: 99;
+    }
+
+    #listeServices a {
+        border-radius: 0.8em;
+        background-color: #e86616;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0.5em;
+        width: 7.5em;
+        height: 7.5em;
+    }
+
+    #listeServices li {
+        margin: 0;
+        font-size: smaller;
+    }
+
+    .brouillon {
+        width: 30%;
+    }
+
+    /*--------------------------------------------------------------------------------------
+    Styles desktop de la page d'accueil
+    ----------------------------------------------------------------------------------------*/
+    header {
+        border: none;
+    }
+
+    #wrapper {
+        justify-content: flex-start;
+    }
+
+    #important div {
+        width: 30%;
+    }
+
+    #important div p {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
+    #haut {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #homeGauche,
+    #homeCentre,
+    #homeDroite {
+        width: 30%;
+    }
+
+    #homeGauche {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #homeDroite {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    #homeDroite div {
+        width: auto;
+    }
+
+    .postIt h2 i {
+        display: block;
+        font-size: 12pt;
+        position: absolute;
+        right: 0.5em;
+        top: 25%;
+    }
+
+    .pointer {
+        cursor: pointer;
+    }
+
+    /*--------------------------------------------------------------------------------------
+    Styles desktop de la page de validation de suppression de section
+    ----------------------------------------------------------------------------------------*/
+    ul#listeSec {
+            display: block;
+            margin-left: 40%;
+    }
+
+    #suppSec {
+        width: 60%;
+    }
+
+    #suppSec select {
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+        margin: 0.5em auto;
+    }
+
+    #suppSec ul {
+        margin-left: 40%;
+    }
+
+    #suppSec .intraButton {
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+    }
+
+    .brouillon:hover {
+        background-color: #003e6a1a;
+    }
+
+    
+    /*--------------------------------------------------------------------------------------
+    Styles desktop de la page applications
+    ----------------------------------------------------------------------------------------*/
+
+    #ajoutGuide {
+        width: 50%;
+    }
+
+    #appli div {
+        width: 30%;
+    }
+
+    /*--------------------------------------------------------------------------------------
+    Styles desktop du bouton d'aide du formulaire d'ajout/modif d'un post
+    ----------------------------------------------------------------------------------------*/
+    #aidePost {
+        right: 20%;
+        max-width: 25%;
+    }
+
+    /*--------------------------------------------------------------------------------------
+    Styles desktop de la page d'ajout de vidéo
+    ----------------------------------------------------------------------------------------*/
+
+    #boutonsVid {
+        margin: auto 35%;
+    }
+
+    
+    /*--------------------------------------------------------------------------------------
+    Styles desktop du guide utilisateur
+    ----------------------------------------------------------------------------------------*/
+    #guideUtilisation {
+        width: 70%;
+        margin: auto;
+    }
+    
+
+}

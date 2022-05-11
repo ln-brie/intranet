@@ -1,0 +1,68 @@
+<div id="formulairePost">
+    <form id="ajout" action="index.php?page={page}&action={effet}" method="POST"></form>
+    <form id="addFile"></form> <!-- ligne à supprimer au passage à Sharepoint -->
+    <span id="titreAddForm"><h2>{action} d'un post</h2>
+
+    <!----------------------- div "aidePost" à supprimer au passage à Sharepoint ------------------------------------->
+    <div id="aidePost">
+        <h3><i class="far fa-question-circle"></i></h3>
+        <span>
+            Insérer un lien :
+                <ol>
+                    <li>vers un site ou un document en ligne :
+                        <ul>
+                            <li>cliquez sur <i class="fas fa-link"></i></li>
+                            <li>remplissez le champ "URL" avec le lien vers la page </li>
+                            <li>remplissez le champ "texte" avec texte sur lequel il faudra cliquer </li>
+                            <li>validez</li>
+                        </ul>
+                    </li>
+                    <li>vers un document sur votre ordinateur : <ul>
+                        <li>cliquez sur "choisir un fichier" (sous la zone de texte)  </li>
+                        <li>sélectionnez le document voulu </li>
+                        <li>cliquez sur "Ajouter" </li>
+                        <li>copiez le lien qui s'affiche sous la zone de téléchargement (par exemple : docs/nom_du_fichier.pdf) </li>
+                        <li>suivez les étapes du paragraphe 1 en collant le lien dans le champ "URL"</li>
+                    </ul>     
+                    </li>
+                </ol>
+                Choisissez ensuite la section dans laquelle ranger le post et cochez les options si besoin.
+                <p>Validez, c'est fait !</p>
+            </p>        
+        </span>
+    </div>
+    <!---------------------------------------------------------------------------------------------------------------->
+
+</span>
+    <input type="text" name="id" id="id" hidden value="{id}" form="ajout">
+    <label for="titre">Titre du post* :</label><input type="text" name="titre" id="titre"
+        placeholder="ex : Réunion du 1er mars" required value="{titre}" maxlength="29" form="ajout">
+    <textarea name="contenu" id="contenu" cols="30" rows="10" placeholder="Texte descriptif" required
+        form="ajout">{contenu}</textarea>
+
+    <!---------------------- div "selectFile" à supprimer au passage à Sharepoint ------------------------------------>
+    <div id="selectFile">
+        <input type="file" name="file" class="file" required form="addFile">
+        <button type="submit" class="submit" form="addFile" id="validAddFile">Ajouter</button>
+        <div id="retourFile"></div>
+    </div>
+
+    <!----------------------------------------------------------------------------------------------------------------->
+    
+    <label for="emplacement">Où voulez-vous placer ce post ?</label>
+    <select name="emplacement" required form="ajout">
+        {options}
+    </select>
+    <div id="exclure"><input type="checkbox" name="exclure" value="1" {coche} form="ajout"><label for="exclure">Exclure
+            du flux
+            des nouveautés <small> (le post ne sera pas affiché sur la page d'accueil)</small></label><br>
+        <input type="checkbox" name="brouillon" value="1" {brouillon} form="ajout"><label for="brouillon">Ce post est un
+            brouillon</label>
+    </div>
+    <div class="buttons">
+        <a><button type="submit" class="intraButton" form="ajout">Valider</button></a>
+        <a class="lienBouton" href="index.php?page={page}&action={actionretour}"><button type="button"
+                class="intraButton">Annuler</button></a>
+    </div>
+    
+</div>

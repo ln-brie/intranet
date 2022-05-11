@@ -1,0 +1,32 @@
+<form action="index.php?page={page}&action={ctrl}" method="POST" id="shortForm">
+    <h3>{action}</h3>
+        {select}
+        <input type="hidden" name="id" id="id" value="{id}">
+        <input type="text" name="titre" id="titre" placeholder="{phTitre}*" value="{titre}" maxlength="29" required>
+        <input type="url" name="lien" id="lien" placeholder="Lien vers {phContenu}" value="{lien}" required> 
+
+
+
+        <!------------à supprimer après le passage à sharepoint----------------------------------------------------->
+        ou 
+        <a href="#popupShort" rel="modal:open">importer un fichier</a>
+        <!----------------------------------------------------------------------------------------------------------->
+
+
+
+        <button type="submit" class="intraButton">{bouton}</button>
+</form>
+
+
+
+        <!---------------------------------div popupShort à supprimer après passage à sharepoint-------------------->
+
+<div id="popupShort" class="modal">
+    <form id="{formId}" enctype="multipart/form-data">
+        <input type="file" name="fichierShort" id="fichierShort">
+        <button type="submit" class="intraButton">Importer {importDoc}</button>
+    </form>
+    <p id="retour"></p>
+
+</div>
+        <!----------------------------------------------------------------------------------------------------------->

@@ -1,0 +1,34 @@
+<div id="menusp">            
+    <i class="fas fa-bars"></i>
+</div>
+<nav id="menuHaut">
+    
+        <p id="connectLink">{connect}</p>
+    <ul id="liensMenu">
+        <li><a href="index.php">Accueil</a></li>
+        <li><a href="index.php?page=applications">Outils et applications</a></li>
+        <li><a href="index.php?page=galerie">Galerie</a></li>
+        <li id="search"><i class="fas fa-search"></i><form action="index.php" id="searchForm"><input type="search" name="request" id="request" placeholder=""/></form></li>
+    </ul>
+
+    <ul id="listeServices">
+        <li><a href="index.php?page=direction"><img src="img/logosServices/direction.png" alt="direction" class="logoService"><span class="service">Direction</span></a></li>
+        <li><a href="index.php?page=ressourcesh"><img src="img/logosServices/rh.png" alt="rh" class="logoService"><span class="service">Ressources humaines</span></a></li>
+        <li><a href="index.php?page=communication"><img src="img/logosServices/comm.png" alt="communication" class="logoService"><span class="service">Communication</span></a></li>
+        <li><a href="index.php?page=secuenv"><img src="img/logosServices/secu.png" alt="sécurité" class="logoService"><span class="service">Sécurité et environnement</span></a></li>
+        <li><a href="index.php?page=qualite"><img src="img/logosServices/qualite.png" alt="qualité" class="logoService"><span class="service">Qualité</span></a></li>
+        <li><a href="index.php?page=informatique"><img src="img/logosServices/informatique.png" alt="service informatique" class="logoService"><span class="service">Informatique</span></a></li>
+        <li><a href="index.php?page=plansprod"><img src="img/logosServices/plans.png" alt="plans produits" class="logoService"><span class="service">Plans produits</span></a></li>
+        <li><a href="index.php?page=comptabilite"><img src="img/logosServices/compta.png" alt="compta" class="logoService"><span class="service">Comptabilité</span></a></li>
+        <li><a href="index.php?page=logistique"><img src="img/logosServices/logistique.png" alt="logistique" class="logoService"><span class="service">Logistique, magasin et service clients</span></a></li>
+        <li><a href="index.php?page=achats"><img src="img/logosServices/achats.png" alt="achats" class="logoService"><span class="service">Achats</span></a></li>
+    </ul>
+</nav>
+<div id="connect" class="modal">
+    <form id="connectForm">
+        <input type="text" name="user" id="user" required placeholder="nom d'utilisateur">
+        <input type="password" name="pwd" id="pwd" required placeholder="mot de passe">
+        <p id="retourConnect"></p>
+        <button type="submit" class="intraButton" id="connectBtn">Se connecter</button>
+    </form>
+</div>

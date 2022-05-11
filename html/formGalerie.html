@@ -1,0 +1,33 @@
+<p id="galleryMgmt"><span id="lienAddImg">Ajouter une image</span> - <a href="index.php?page=galerie&action=delimgtable">Supprimer une image</a></p>
+<form action="index.php?page=galerie&action=add" method="POST" id="formAddPhoto">
+    <input type="text" name="titre" maxlength="29" placeholder="Titre de la photo" required>
+    <span><input type="url" placeholder="Saisir un lien" id="lienPhoto" name="lienPhoto" required> 
+
+
+
+        
+        <!-- à supprimer au passage à Sharepoint -->
+        ou <a
+            href="#popupAddImg" rel="modal:open">importer une image</a>
+        <!----------------------------------------->
+
+
+
+
+        
+         </span>
+    <button type="submit" class="intraButton">Ajouter</button>
+</form>
+
+
+
+
+<!-- div "popupAddImg" à supprimer au passage à Sharepoint -->
+<div id="popupAddImg" class="modal">
+    <form id="uploadPhoto" enctype="multipart/form-data">
+        <input type="file" name="uploadImg" id="uploadImg">
+        <button type="submit" class="intraButton">Importer l'image</button>
+    </form>
+    <div id="retourImg"></div>
+</div>
+<!------------------------------------------------------------>
